@@ -252,7 +252,7 @@ This should be placed within the 'describe User do...' block.  Your user_spec.rb
         expect(user).to respond_to :username
       end
 
-      describe 'username' do
+      describe '#username' do
         it 'can not be blank' do
           user = User.create(username:"")
 
@@ -264,11 +264,40 @@ This should be placed within the 'describe User do...' block.  Your user_spec.rb
 
 > What do you see when you run rspec in terminal?
 
-> How can we make this test pass?
+## Exercise pt. 2
+
+> Write a test for validating the presence of e-mail
+
+## Exercise pt. 3
+
+> Write a test for validating that username is 2 or more characters
+
+## Exercise pt. 4
+
+> Make all the tests pass.
+> For the last test, you can refer to [Active Record Length Validations](http://edgeguides.rubyonrails.org/active_record_validations.html#length)
 
 
+Refactoring our test
+-----------------
 
-###Students on their own write the email validation test
+Right now, have this code in our *spec/models/user_name_spec:*
+
+    it 'responds to username' do
+      user = User.create
+
+      expect(user).to respond_to :username
+    end
+
+We can refactor this test to make it more readable by using braces instead of 'do end', and utilizing the is_expected method.
+
+    it { is_expected.to respond_to :username }
+
+Now we have this wonderful one-liner!  Unlike 'expect(user)' , is_expected does not take user as an argument.  The subject 'user' is inferred from when we said 'describe User do...'
+
+> Do you notice any other redundancy in the user_spec.rb file?  What is being repeated?
+
+We can use 'subject' to DRY up our code.
 
 
 
