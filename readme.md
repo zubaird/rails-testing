@@ -264,15 +264,15 @@ This should be placed within the 'describe User do...' block.  Your user_spec.rb
 
 > What do you see when you run rspec in terminal?
 
-## Exercise pt. 2
+## Exercise pt. 1
 
 > Write a test for validating the presence of e-mail
 
-## Exercise pt. 3
+## Exercise pt. 2
 
 > Write a test for validating that username is 2 or more characters
 
-## Exercise pt. 4
+## Exercise pt. 3
 
 > Make all the tests pass.
 > For the last test, you can refer to [Active Record Length Validations](http://edgeguides.rubyonrails.org/active_record_validations.html#length)
