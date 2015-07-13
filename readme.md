@@ -31,16 +31,16 @@ Create a new Rails app called friendface, and install RSpec.
 <code>$ rake db:create
 
 *Gemfile:*
-<pre>group :development, :test do
-  .  .  .
-  gem 'rspec-rails', '~> 3.0'
-end
+    group :development, :test do
+      .  .  .
+      gem 'rspec-rails', '~> 3.0'
+    end
 
 *Terminal:*
 
-<code>bundle
+    bundle
 
-<code>rails g rspec:install
+    rails g rspec:install
 
 [RSpec About](http://rspec.info/about/)
 
