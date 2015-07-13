@@ -24,11 +24,11 @@ Create a new Rails app called friendface, and install RSpec.
 
 *Terminal:*
 
-<code>$ rails new friendface -TBd postgresql
+    $ rails new friendface -TBd postgresql
 
-<code>$ cd friendface
+    $ cd friendface
 
-<code>$ rake db:create
+    $ rake db:create
 
 *Gemfile:*
     group :development, :test do
